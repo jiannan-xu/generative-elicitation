@@ -86,3 +86,4 @@ where:
 * `--pool_diversity_num_clusters` refers to the number of clusters we use for pool-based active learning with diversity sampling.
 * `--task` refers to which domain we are evaluating (content recommendation, moral reasoning, email validation).
 
+# https://community.openai.com/t/moving-from-text-davinci-003-to-gpt-3-5-turbo-instruct-results-in-unrecognized-suffix-error/380149

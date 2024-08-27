@@ -142,7 +142,7 @@ def get_next_prompt():
     else:
         experiment_types_with_fewest_participants = []
         min_num_participants = float("inf")
-        prompt_types_to_consider = ["website_preferences"]
+        prompt_types_to_consider = ["credit_card_preferences"] #["website_preferences"]
         for prompt_type in prompt_types_to_consider:
             for query_type in experiment_type_to_prolific_id[prompt_type]:
                 num_participants = len(experiment_type_to_prolific_id[prompt_type][query_type])
@@ -257,19 +257,19 @@ def save():
     return jsonify({"response": "done"})
 
 
-@app.route("/submit_evaluation", methods=["POST"])
-def evaluation_submission():
-    prolific_id = request.form.get("prolific_id")
-    user_labels = []
-    for idx, test_sample in enumerate(prolific_id_to_experiment_type[prolific_id]["prompt"]["test_samples"]):
-        user_labels.append({
-            "sample": test_sample,
-            "label": request.form.get(f"test-case-{idx}"),
-            "explanation": request.form.get(f"test-case-{idx}-explanation"),
-        })
-    prolific_id_to_user_responses[prolific_id]["evaluation_results"] = user_labels
-    save()
-    return jsonify({"response": "done"})
+# @app.route("/submit_evaluation", methods=["POST"])
+# def evaluation_submission():
+#     prolific_id = request.form.get("prolific_id")
+#     user_labels = []
+#     for idx, test_sample in enumerate(prolific_id_to_experiment_type[prolific_id]["prompt"]["test_samples"]):
+#         user_labels.append({
+#             "sample": test_sample,
+#             "label": request.form.get(f"test-case-{idx}"),
+#             "explanation": request.form.get(f"test-case-{idx}-explanation"),
+#         })
+#     prolific_id_to_user_responses[prolific_id]["evaluation_results"] = user_labels
+#     save()
+#     return jsonify({"response": "done"})
 
 
 @app.route("/submit_feedback", methods=["POST"])

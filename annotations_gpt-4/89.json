@@ -1,0 +1,19 @@
+{
+  "prolific_id": "89",
+  "engine": "gpt-4",
+  "query_type": "Non-interactive",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to read the following credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [],
+  "evaluation_results": [],
+  "feedback": {
+    "feedback_challenge": "4",
+    "feedback_new_issues_interaction": "4",
+    "feedback_interaction_coverage_pretest": "4"
+  },
+  "query_prompt": "non-interactive"
+}

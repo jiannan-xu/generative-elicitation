@@ -1,0 +1,81 @@
+{
+    "persona": "Suppose you are this person:\nEducation: High School\nOccupation: Barista \n Needs: Build credit scores, no annual fee.\n\nAnswer the following questions about your interests from the perspective of this person. Assume you do not have any interests other than those presented here.",
+    "task_description": "learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests",
+    "pool_al_prompt": [
+        "A user has a particular set of preferences over what credit card they would like to have. Based on these preferences, the user has specified whether they are interested in applying the following credit cards.",
+        "Based on these preferences, would the user be interested in applying for the following credit card? Only answer \"yes\" or \"no\". If uncertain, please make your best guess."
+    ],
+    "test_case_prompt": [
+        "A user has a particular set of preferences over what credit card they would like to read. They have specified their preferences below:",
+        "Based on these preferences, would the user be interested in applying for the following credit card? Answer with a probability between 0 and 1, where 0 means \"definitely not interested\" and 1 means \"definitely interested\". Only output the probability and nothing else. If uncertain, make your best guess."
+    ],
+    "example_edge_case_question_format": "Are you interested in applying for the following credit card? [edge case]",
+    "example_edge_case_question": "Are you interested in applying for the following credit card? Credit Card Name: Capital One Platinum Secured Credit Card, No annual or hidden fees. See if you're approved in seconds. Building your credit? Using the Capital One Platinum Secured card responsibly could help.",
+    "implementation": "user's interests",
+    "test_cases": [
+        [
+            "Credit Card Name: Capital One Platinum Secured Credit Card, No annual or hidden fees. See if you're approved in seconds. Building your credit? Using the Capital One Platinum Secured card responsibly could help.",
+            true
+        ],
+        [
+            "Credit Card Name: Destiny Mastercard, The Destiny Mastercard is an unsecured credit card for people with bad credit or no credit. If you have bad credit or no credit, the Destiny Mastercard is a credit card that can help you build your credit.",
+            true
+        ],
+        [
+            "Credit Card Name: Chase Freedom Unlimited, Earn a $200 Bonus after you spend $500 on purchases in your first 3 months from account opening. Earn 5% cash back on grocery store purchases (not including Target® or Walmart® purchases) on up to $12,000 spent in the first year. Earn unlimited 1.5% cash back on all other purchases. No annual fee.",
+            false
+        ],
+        [
+            "Credit Card Name: Citi® Double Cash Card, Earn cash back twice. Earn 2% on every purchase with unlimited 1% cash back when you buy, plus an additional 1% as you pay for those purchases. No annual fee.",
+            false
+        ],
+        [
+            "Credit Card Name: Wells Fargo Active Cash℠ Card, Earn a $200 cash rewards bonus after spending $1,000 in purchases in the first 3 months. Earn unlimited 2% cash rewards on purchases. No annual fee.",
+            false
+        ],
+        [
+            "Credit Card Name: Bank of America® Customized Cash Rewards credit card, $200 online cash rewards bonus after you make at least $1,000 in purchases in the first 90 days of account opening. Earn 3% cash back in the category of your choice, automatic 2% at grocery stores and wholesale clubs (up to $2,500 in combined choice category/grocery store/wholesale club quarterly purchases) and unlimited 1% on all other purchases.",
+            false
+        ],
+        [
+            "Credit Card Name: Capital One Quicksilver Cash Rewards Credit Card, One-time $200 cash bonus after you spend $500 on purchases within 3 months from account opening. Earn unlimited 1.5% cash back on every purchase, every day. No rotating categories or sign-ups needed to earn cash rewards.",
+            false
+        ],
+        [
+            "Credit Card Name: Chase Sapphire Preferred Card, Earn 100,000 bonus points after you spend $4,000 on purchases in the first 3 months from account opening. That's $1,250 when you redeem through Chase Ultimate Rewards®. Enjoy new benefits such as a $50 annual Ultimate Rewards Hotel Credit, 5X points on travel purchased through Chase Ultimate Rewards®, 3X points on dining and 2X points on all other travel purchases, plus more.",
+            false
+        ],
+        [
+            "Credit Card Name: American Express® Gold Card, Rose Gold is back. You can now choose between Gold or Rose Gold. Earn 60,000 Membership Rewards® Points after you spend $4,000 on eligible purchases with your new Card within the first 6 months. Earn 4X Membership Rewards® Points at Restaurants, plus takeout and delivery in the U.S., and earn 4X Membership Rewards® Points at U.S. supermarkets (on up to $25,000 per calendar year in purchases, then 1X).",
+            false
+        ],
+        [
+            "Credit Card Name: Capital One Venture Rewards Credit Card, Enjoy a one-time bonus of 60,000 miles once you spend $3,000 on purchases within 3 months from account opening, equal to $600 in travel. Earn unlimited 2X miles on every purchase, every day. Miles won't expire for the life of the account and there's no limit to how many you can earn.",
+            false
+        ],
+        [
+            "Credit Card Name: Chase Freedom Flex, Earn a $200 Bonus after you spend $500 on purchases in your first 3 months from account opening. 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate. Enjoy new 5% categories each quarter! 5% cash back on travel purchased through Chase Ultimate Rewards®, our premier rewards program that lets you redeem rewards for cash back, travel, gift cards and more.",
+            false
+        ],
+        [
+            "Credit Card Name: Citi® Diamond Preferred® Card, 0% Intro APR for 18 months on purchases from date of account opening and 0% Intro APR for 18 months on balance transfers from date of first transfer. After that the variable APR will be 13.74% - 23.74%, based on your creditworthiness. Balance transfers must be completed within 4 months of account opening.",
+            false
+        ],
+        [
+            "Credit Card Name: Discover it® Miles, Unlimited 1.5x Miles on every dollar you spend on purchases. 0% Intro APR for 14 months on purchases and balance transfers. Then 11.99% to 22.99% Standard Variable Purchase APR and up to 5% fee for future balance transfers will apply.",
+            false
+        ],
+        [
+            "Credit Card Name: Wells Fargo Platinum Card, 0% Intro APR for 18 months on purchases and qualifying balance transfers. After that your variable APR will be 16.49% to 24.49%. Balance transfers made within 120 days qualify for the intro rate and fee.",
+            false
+        ],
+        [
+            "Credit Card Name: Bank of America® Travel Rewards credit card, Earn unlimited 1.5 points for every $1 you spend on all purchases everywhere, every time and no expiration on points. Earn 25,000 online bonus points after you make at least $1,000 in purchases in the first 90 days of account opening - that can be a $250 statement credit toward travel purchases.",
+            false
+        ],
+        [
+            "Credit Card Name: Discover it® Secured, No Annual Fee, earn cash back, and build your credit with responsible use. Using your secured credit card helps build a credit history with the three major credit bureaus. Generally, prepaid and debit cards can’t do that.",
+            true
+        ]
+    ]
+}
