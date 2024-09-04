@@ -1,0 +1,233 @@
+{
+  "prolific_id": "1999",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to read the following credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "What are some of the key features or benefits you are looking for in a credit card, such as rewards programs, low interest rates, or travel perks?"
+    },
+    {
+      "sender": "user",
+      "message": "I want a card to pay my bill",
+      "time_spent_ms": 45288,
+      "display_time": 1714659628382,
+      "submission_time": 1714659673670
+    },
+    {
+      "sender": "assistant",
+      "message": "What types of purchases do you typically make with your credit card, and how often do you plan on using it?"
+    },
+    {
+      "sender": "user",
+      "message": "food, twice a week",
+      "time_spent_ms": 25588,
+      "display_time": 1714659676947,
+      "submission_time": 1714659702535
+    },
+    {
+      "sender": "assistant",
+      "message": "Do you have any specific financial goals or plans, such as building credit or managing debt, that you hope to achieve with your new credit card?"
+    },
+    {
+      "sender": "user",
+      "message": "pay off my debt",
+      "time_spent_ms": 12434,
+      "display_time": 1714659705496,
+      "submission_time": 1714659717930
+    },
+    {
+      "sender": "assistant",
+      "message": "What kind of additional benefits or features, such as cash back on certain categories, extended warranty, or fraud protection, would you value in a credit card?"
+    },
+    {
+      "sender": "user",
+      "message": "cash back",
+      "time_spent_ms": 8091,
+      "display_time": 1714659720846,
+      "submission_time": 1714659728937
+    },
+    {
+      "sender": "assistant",
+      "message": "How important is it for you to have a credit card with low fees, such as annual fees or foreign transaction fees, and how often do you plan to use your card for international transactions or large purchases?"
+    },
+    {
+      "sender": "user",
+      "message": "zero fee is very important",
+      "time_spent_ms": 16749,
+      "display_time": 1714659732939,
+      "submission_time": 1714659749688
+    },
+    {
+      "sender": "assistant",
+      "message": "How do you plan to manage your credit card payments and what is your strategy for maximizing the cash back rewards?"
+    },
+    {
+      "sender": "user",
+      "message": "every time I receive a pay check I'll pay my credit card",
+      "time_spent_ms": 38555,
+      "display_time": 1714659751736,
+      "submission_time": 1714659790291
+    },
+    {
+      "sender": "assistant",
+      "message": "What are your spending habits in terms of online shopping, dining out, or travel, and how would you like your credit card to support these habits?"
+    },
+    {
+      "sender": "user",
+      "message": "I like shopping",
+      "time_spent_ms": 18798,
+      "display_time": 1714659793153,
+      "submission_time": 1714659811951
+    },
+    {
+      "sender": "assistant",
+      "message": "What are your preferences when it comes to customer service and online banking features, such as mobile app functionality, ease of payment, and access to credit score updates?"
+    },
+    {
+      "sender": "user",
+      "message": "I want good and easy customer service",
+      "time_spent_ms": 18071,
+      "display_time": 1714659814450,
+      "submission_time": 1714659832521
+    },
+    {
+      "sender": "assistant",
+      "message": "What are your expectations in terms of credit card security features, and how important are these features in your decision to choose a particular card?"
+    },
+    {
+      "sender": "user",
+      "message": "no fraud",
+      "time_spent_ms": 28188,
+      "display_time": 1714659834910,
+      "submission_time": 1714659863098
+    },
+    {
+      "sender": "assistant",
+      "message": "How do you envision using your credit card in relation to your lifestyle, such as for everyday expenses, special occasions, or emergencies, and how would these uses influence your choice of card?"
+    },
+    {
+      "sender": "user",
+      "message": "everyday expenses",
+      "time_spent_ms": 15551,
+      "display_time": 1714659865906,
+      "submission_time": 1714659881457
+    },
+    {
+      "sender": "assistant",
+      "message": "What are your thoughts on credit card reward programs, such as points for specific categories like gas or groceries, and how would these influence your decision in choosing a card?"
+    },
+    {
+      "sender": "user",
+      "message": "I don't know how to use remard points",
+      "time_spent_ms": 14941,
+      "display_time": 1714659884178,
+      "submission_time": 1714659899119
+    },
+    {
+      "sender": "assistant",
+      "message": "How do you feel about credit cards that offer introductory bonuses or promotional rates, and would these incentives influence your decision in choosing a card?"
+    },
+    {
+      "sender": "user",
+      "message": "I like bonuses",
+      "time_spent_ms": 10221,
+      "display_time": 1714659901491,
+      "submission_time": 1714659911712
+    },
+    {
+      "sender": "assistant",
+      "message": "What are your thoughts on credit card benefits related to lifestyle and wellness, such as gym memberships, health insurance, or lifestyle retail discounts, and how would these perks influence your decision in choosing a card?"
+    },
+    {
+      "sender": "user",
+      "message": "I dont care much",
+      "time_spent_ms": 14393,
+      "display_time": 1714659914555,
+      "submission_time": 1714659928948
+    }
+  ],
+  "evaluation_results": [
+    {
+      "sample": "Credit Card Name: Capital One Platinum Secured Credit Card, No annual or hidden fees. See if you're approved in seconds. Building your credit? Using the Capital One Platinum Secured card responsibly could help.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Destiny Mastercard, The Destiny Mastercard is an unsecured credit card for people with bad credit or no credit. If you have bad credit or no credit, the Destiny Mastercard is a credit card that can help you build your credit.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Chase Freedom Unlimited, Earn a $200 Bonus after you spend $500 on purchases in your first 3 months from account opening. Earn 5% cash back on grocery store purchases (not including Target\u00ae or Walmart\u00ae purchases) on up to $12,000 spent in the first year. Earn unlimited 1.5% cash back on all other purchases. No annual fee.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Citi\u00ae Double Cash Card, Earn cash back twice. Earn 2% on every purchase with unlimited 1% cash back when you buy, plus an additional 1% as you pay for those purchases. No annual fee.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Discover it\u00ae Cash Back, Earn 5% cash back on everyday purchases at different places each quarter like Amazon.com, grocery stores, restaurants, gas stations and when you pay using PayPal, up to the quarterly maximum when you activate. Plus, earn unlimited 1% cash back on all other purchases - automatically.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Wells Fargo Active Cash\u2120 Card, Earn a $200 cash rewards bonus after spending $1,000 in purchases in the first 3 months. Earn unlimited 2% cash rewards on purchases. No annual fee.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Bank of America\u00ae Customized Cash Rewards credit card, $200 online cash rewards bonus after you make at least $1,000 in purchases in the first 90 days of account opening. Earn 3% cash back in the category of your choice, automatic 2% at grocery stores and wholesale clubs (up to $2,500 in combined choice category/grocery store/wholesale club quarterly purchases) and unlimited 1% on all other purchases.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Capital One Quicksilver Cash Rewards Credit Card, One-time $200 cash bonus after you spend $500 on purchases within 3 months from account opening. Earn unlimited 1.5% cash back on every purchase, every day. No rotating categories or sign-ups needed to earn cash rewards.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Chase Sapphire Preferred Card, Earn 100,000 bonus points after you spend $4,000 on purchases in the first 3 months from account opening. That's $1,250 when you redeem through Chase Ultimate Rewards\u00ae. Enjoy new benefits such as a $50 annual Ultimate Rewards Hotel Credit, 5X points on travel purchased through Chase Ultimate Rewards\u00ae, 3X points on dining and 2X points on all other travel purchases, plus more.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: American Express\u00ae Gold Card, Rose Gold is back. You can now choose between Gold or Rose Gold. Earn 60,000 Membership Rewards\u00ae Points after you spend $4,000 on eligible purchases with your new Card within the first 6 months. Earn 4X Membership Rewards\u00ae Points at Restaurants, plus takeout and delivery in the U.S., and earn 4X Membership Rewards\u00ae Points at U.S. supermarkets (on up to $25,000 per calendar year in purchases, then 1X).",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Capital One Venture Rewards Credit Card, Enjoy a one-time bonus of 60,000 miles once you spend $3,000 on purchases within 3 months from account opening, equal to $600 in travel. Earn unlimited 2X miles on every purchase, every day. Miles won't expire for the life of the account and there's no limit to how many you can earn.",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card Name: Discover it\u00ae Secured, No Annual Fee, earn cash back, and build your credit with responsible use. Using your secured credit card helps build a credit history with the three major credit bureaus. Generally, prepaid and debit cards can\u2019t do that.",
+      "label": "yes",
+      "explanation": ""
+    }
+  ],
+  "feedback": {
+    "feedback_challenge": "3",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "5",
+    "feedback_interaction_coverage_posttest": "5",
+    "feedback_testcase_use_history": "5",
+    "feedback_lm_experience": "2",
+    "feedback_other": ""
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked. At the same time however, the question should be bite-sized, and not ask for too much at once. Generate the open-ended question and nothing else:"
+    }
+  ]
+}

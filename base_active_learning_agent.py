@@ -8,30 +8,32 @@ from sklearn.metrics import roc_auc_score
 
 
 class BaseActiveLearningAgent(ABC):
+    ''' Defines an abstract base class named BaseActiveLearningAgent. 
+    The (ABC) indicates that this class is abstract and cannot be instantiated directly.'''
     
     def __init__(self, target_specification_file, engine, openai_cache_file=None, **kwargs):
-        self.get_gold_domain_info(target_specification_file)
-        self.engine = engine
-        self.openai_cache_file = openai_cache_file
-        self.openai_cache = load_openai_cache(openai_cache_file)
-        self.temperature = kwargs.get("temperature", 0.0)
+        self.get_gold_domain_info(target_specification_file) # Calls a method to load the “gold standard” domain information from the specified file.
+        self.engine = engine # The engine to use for querying the API.
+        self.openai_cache_file = openai_cache_file # The file to use for caching API responses.
+        self.openai_cache = load_openai_cache(openai_cache_file) # Load the cache from the specified file.
+        self.temperature = kwargs.get("temperature", 0.0) # The temperature to use for sampling from the model.
 
-        self.interaction_history = []
+        self.interaction_history = [] # A list to store the interaction history.
 
 
     def get_gold_domain_info(self, target_specification_file):
         '''Gets the gold domain specification that the model should try to learn and other associated information.
         '''
         gold_task = json.load(open(target_specification_file))  #"sample_tests.json"
-        for key in gold_task:
-            setattr(self, key, gold_task[key])
-            if key == "regex":
-                self.gold_regex_text = self.regex
-                self.gold_regex = re.compile(self.gold_regex_text)
-        self.persona_text = self.persona
+        for key in gold_task: # Iterate over the keys in the gold_task dictionary.
+            setattr(self, key, gold_task[key])  # Dynamically sets attributes on the instance with the values from the gold_task dictionary.
+            if key == "regex": 
+                self.gold_regex_text = self.regex # Set the gold_regex_text attribute to the regex attribute.
+                self.gold_regex = re.compile(self.gold_regex_text) # Compile the gold regex.
+        self.persona_text = self.persona # Stores the persona text (used to shape the agent’s behavior).
 
     def get_task_description(self):
-        return "validate an email address adheres to a specific format"
+        return "validate an email address adheres to a specific format" # Returns a description of the task.
 
     @staticmethod
     def format_questions_and_answers(questions_and_answers):

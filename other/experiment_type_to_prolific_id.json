@@ -1,0 +1,18 @@
+{
+    "credit_card_preferences": {
+        "Non-interactive": [
+            "credit_card_noninteractive",
+            "000",
+            "0000",
+            "88",
+            "89"
+        ],
+        "Generative open-ended questions": [
+            "credit_card_questions",
+            "1999",
+            "888",
+            "19980",
+            "0"
+        ]
+    }
+}

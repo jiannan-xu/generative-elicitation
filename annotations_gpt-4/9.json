@@ -1,0 +1,69 @@
+{
+  "prolific_id": "9",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "What are some features or benefits you would like your credit card to offer that align with your lifestyle and spending habits?"
+    },
+    {
+      "sender": "user",
+      "message": "I like shopping",
+      "time_spent_ms": 9966,
+      "display_time": 1725404095280,
+      "submission_time": 1725404105246
+    },
+    {
+      "sender": "assistant",
+      "message": "What types of shopping do you typically do most - online, in-store, groceries, clothing, electronics, travel, or something else?"
+    },
+    {
+      "sender": "user",
+      "message": "groceries",
+      "time_spent_ms": 8009,
+      "display_time": 1725404106956,
+      "submission_time": 1725404114965
+    },
+    {
+      "sender": "assistant",
+      "message": "Do you have any specific grocery stores or chains where you shop most frequently, and do you also participate in any loyalty or rewards programs with these stores?"
+    },
+    {
+      "sender": "user",
+      "message": "yes",
+      "time_spent_ms": 102054,
+      "display_time": 1725404117037,
+      "submission_time": 1725404219091
+    }
+  ],
+  "evaluation_results": [
+    {
+      "sample": "recommendation",
+      "label": null,
+      "explanation": null
+    },
+    {
+      "sample": "source_documents",
+      "label": null,
+      "explanation": null
+    }
+  ],
+  "feedback": {
+    "feedback_challenge": "4",
+    "feedback_new_issues_interaction": "4",
+    "feedback_interaction_coverage_pretest": "4"
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked. At the same time however, the question should be bite-sized, and not ask for too much at once. Generate the open-ended question and nothing else:"
+    }
+  ]
+}

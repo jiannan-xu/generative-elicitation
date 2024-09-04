@@ -1,0 +1,58 @@
+{
+  "prolific_id": "990",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "What are some features or benefits that you would like your ideal credit card to offer, and how do you plan to use it in your daily life or for special occasions?"
+    },
+    {
+      "sender": "user",
+      "message": "groceries",
+      "time_spent_ms": 10285,
+      "display_time": 1725410593956,
+      "submission_time": 1725410604241
+    },
+    {
+      "sender": "assistant",
+      "message": "What other types of purchases or expenses, besides groceries, do you anticipate using your credit card for, and how frequently do you expect to make these transactions?"
+    },
+    {
+      "sender": "user",
+      "message": "gas",
+      "time_spent_ms": 6494,
+      "display_time": 1725410606480,
+      "submission_time": 1725410612974
+    },
+    {
+      "sender": "assistant",
+      "message": "What types of rewards or cash back options would you find most beneficial, and are there any specific travel or lifestyle benefits you would like your credit card to offer?"
+    },
+    {
+      "sender": "user",
+      "message": "I travel a lot and I may need a travel insurance.",
+      "time_spent_ms": 26124,
+      "display_time": 1725410615439,
+      "submission_time": 1725410641563
+    }
+  ],
+  "evaluation_results": [],
+  "feedback": {
+    "feedback_challenge": "6",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "2"
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked. At the same time however, the question should be bite-sized, and not ask for too much at once. Generate the open-ended question and nothing else:"
+    }
+  ]
+}

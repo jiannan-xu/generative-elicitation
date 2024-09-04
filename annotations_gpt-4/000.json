@@ -1,0 +1,150 @@
+{
+  "prolific_id": "000",
+  "engine": "gpt-4",
+  "query_type": "Generative yes/no questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "Do you plan to use your credit card for international travel?"
+    },
+    {
+      "sender": "user",
+      "message": "Yes. I traveled a lot!",
+      "time_spent_ms": 10829,
+      "display_time": 1725398957948,
+      "submission_time": 1725398968777
+    },
+    {
+      "sender": "assistant",
+      "message": "Are you interested in earning rewards or cash back on your credit card purchases?"
+    },
+    {
+      "sender": "user",
+      "message": "Yes",
+      "time_spent_ms": 3806,
+      "display_time": 1725398970213,
+      "submission_time": 1725398974019
+    },
+    {
+      "sender": "assistant",
+      "message": "Do you plan on using your credit card for large purchases, such as electronics or furniture?"
+    },
+    {
+      "sender": "user",
+      "message": "No. I don't have these plans.",
+      "time_spent_ms": 15981,
+      "display_time": 1725398975618,
+      "submission_time": 1725398991599
+    },
+    {
+      "sender": "assistant",
+      "message": "Do you intend to use your credit card for everyday expenses like groceries and gas?"
+    },
+    {
+      "sender": "user",
+      "message": "Yes. ",
+      "time_spent_ms": 6125,
+      "display_time": 1725398992865,
+      "submission_time": 1725398998990
+    },
+    {
+      "sender": "assistant",
+      "message": "Are you interested in a credit card that offers special benefits or discounts for dining and entertainment?"
+    },
+    {
+      "sender": "user",
+      "message": "Sure",
+      "time_spent_ms": 4527,
+      "display_time": 1725399000817,
+      "submission_time": 1725399005344
+    },
+    {
+      "sender": "assistant",
+      "message": "Would you be interested in a credit card that offers low interest rates on balance transfers?"
+    },
+    {
+      "sender": "user",
+      "message": "Yes",
+      "time_spent_ms": 5300,
+      "display_time": 1725399006642,
+      "submission_time": 1725399011942
+    },
+    {
+      "sender": "assistant",
+      "message": "Do you plan on using your credit card for online shopping?"
+    },
+    {
+      "sender": "user",
+      "message": "I shop on Amazon a lot!",
+      "time_spent_ms": 15057,
+      "display_time": 1725399013439,
+      "submission_time": 1725399028496
+    },
+    {
+      "sender": "assistant",
+      "message": "Would you be interested in a credit card that offers extended warranty or purchase protection?"
+    },
+    {
+      "sender": "user",
+      "message": "Yes",
+      "time_spent_ms": 5299,
+      "display_time": 1725399029799,
+      "submission_time": 1725399035098
+    },
+    {
+      "sender": "assistant",
+      "message": "Are you interested in a credit card that offers travel insurance or emergency assistance services?"
+    },
+    {
+      "sender": "user",
+      "message": "Of course",
+      "time_spent_ms": 9223,
+      "display_time": 1725399036486,
+      "submission_time": 1725399045709
+    },
+    {
+      "sender": "assistant",
+      "message": "Would you be interested in a credit card that offers special benefits for fitness or wellness purchases?"
+    },
+    {
+      "sender": "user",
+      "message": "No",
+      "time_spent_ms": 3704,
+      "display_time": 1725399047420,
+      "submission_time": 1725399051124
+    },
+    {
+      "sender": "assistant",
+      "message": "Would you be interested in a credit card that offers special benefits or discounts on car rentals?"
+    },
+    {
+      "sender": "user",
+      "message": "No. Thanks!",
+      "time_spent_ms": 35638,
+      "display_time": 1725399052847,
+      "submission_time": 1725399088485
+    },
+    {
+      "sender": "assistant",
+      "message": "Would you be interested in a credit card that offers special benefits or discounts on home improvement or gardening purchases?"
+    }
+  ],
+  "evaluation_results": [],
+  "feedback": {
+    "feedback_challenge": "6",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "5"
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative yes/no question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked. At the same time however, the question should be bite-sized, and not ask for too much at once. Generate the yes/no question and nothing else:"
+    }
+  ]
+}

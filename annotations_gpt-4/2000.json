@@ -1,0 +1,47 @@
+{
+  "prolific_id": "2000",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "What are some of the key features or benefits you are looking for in a credit card, such as rewards programs, low interest rates, or travel perks?"
+    },
+    {
+      "sender": "user",
+      "message": "travel perks",
+      "time_spent_ms": 8343,
+      "display_time": 1725411303857,
+      "submission_time": 1725411312200
+    },
+    {
+      "sender": "assistant",
+      "message": "What specific travel perks are most appealing to you, such as airline miles, hotel points, or access to airport lounges?"
+    },
+    {
+      "sender": "user",
+      "message": "hotel points",
+      "time_spent_ms": 20769,
+      "display_time": 1725411313625,
+      "submission_time": 1725411334394
+    }
+  ],
+  "evaluation_results": [],
+  "feedback": {
+    "feedback_challenge": "5",
+    "feedback_new_issues_interaction": "6",
+    "feedback_interaction_coverage_pretest": "4"
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked. At the same time however, the question should be bite-sized, and not ask for too much at once. Generate the open-ended question and nothing else:"
+    }
+  ]
+}

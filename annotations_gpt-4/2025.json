@@ -1,0 +1,80 @@
+{
+  "prolific_id": "2025",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "What are some of the key features or benefits you are looking for in a credit card, such as rewards programs, low interest rates, or travel perks?"
+    },
+    {
+      "sender": "user",
+      "message": "low interest rates",
+      "time_spent_ms": 8711,
+      "display_time": 1725400358544,
+      "submission_time": 1725400367255
+    },
+    {
+      "sender": "assistant",
+      "message": "How do you typically use your credit card - for everyday purchases, large one-time expenses, or something else?"
+    },
+    {
+      "sender": "user",
+      "message": "Online shopping",
+      "time_spent_ms": 14426,
+      "display_time": 1725400369328,
+      "submission_time": 1725400383754
+    },
+    {
+      "sender": "assistant",
+      "message": "What is your spending habit like in terms of categories such as groceries, dining out, travel, or gas, and how important is it for you to earn rewards in these categories?"
+    },
+    {
+      "sender": "user",
+      "message": "I buy groceries ",
+      "time_spent_ms": 17977,
+      "display_time": 1725400386591,
+      "submission_time": 1725400404568
+    },
+    {
+      "sender": "assistant",
+      "message": "How often do you plan on paying off your credit card balance, and do you anticipate needing any special features like balance transfers or cash advances?"
+    },
+    {
+      "sender": "user",
+      "message": "Weekly",
+      "time_spent_ms": 55787,
+      "display_time": 1725400406728,
+      "submission_time": 1725400462515
+    },
+    {
+      "sender": "assistant",
+      "message": "What other financial goals or plans do you have in the near future that might influence your choice of credit card, such as buying a house, starting a business, or planning a big vacation?"
+    },
+    {
+      "sender": "user",
+      "message": "buying a house",
+      "time_spent_ms": 15756,
+      "display_time": 1725400464799,
+      "submission_time": 1725400480555
+    }
+  ],
+  "evaluation_results": [],
+  "feedback": {
+    "feedback_challenge": "5",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "5"
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked. At the same time however, the question should be bite-sized, and not ask for too much at once. Generate the open-ended question and nothing else:"
+    }
+  ]
+}

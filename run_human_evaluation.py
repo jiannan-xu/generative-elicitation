@@ -17,13 +17,15 @@ task_specific_directives = {
     "website_preferences": '\nFor this task, "yes" means the user would like the website, and "no" means the user would not like the website',
     "moral_reasoning": '\nFor this task, "yes" means the user would believe it is ethical to steal a loaf of bread, and "no" means the user would believe it is not ethical to steal a loaf of bread',
     "email_regex": '\nFor this task, "yes" means the user would find the email address valid, while "no" means the user would find the email address invalid',
+    "credit_card_preferences": '\nFor this task, "yes" means the user would like the credit card, and "no" means the user would not like the credit card',
 }
+
 task_specific_instructions = {
     "website_preferences": "asks a user about their preferences for a website",
     "moral_reasoning": "asks a user under what conditions they would believe it is ethical to steal a loaf of bread",
     "email_regex": "asks a user about their preferences for what makes a valid format for email addresses",
+    "credit_card_preferences": "asks a user about their preferences for a credit card",
 }
-
 
 def get_saved_interaction_files_for_task(saved_annotations_dir, task):
     with open(f"{saved_annotations_dir}/experiment_type_to_prolific_id.json") as f:
@@ -123,7 +125,7 @@ def main(args):
 
 class ArgumentParser(Tap):
     saved_annotations_dir: str = "annotations_gpt-4"  # The directory where the saved annotations are stored.
-    task: str = "moral_reasoning"  # The target format we are designing for experiments (e.g. email_regex, moral_reasoning, website_preferences)
+    task: str = "moral_reasoning"  # The target format we are designing for experiments (e.g. email_regex, moral_reasoning, website_preferences, credit_card_preferences)
     eval_condition: str = "per_minute"  # When to evaluate the agent (e.g. at_end, per_minute, per_turn, per_turn_up_to_5)
     engine: str = "gpt-4"  # The OpenAI engine to use (e.g. gpt-3.5-turbo, gpt-4).
     no_cache: bool = False  # Whether to use the OpenAI cache file.

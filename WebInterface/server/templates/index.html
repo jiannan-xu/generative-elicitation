@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Elicitation Study</title>
+    <title>Adaptive Preference Elicitation with Credit Card Recommendation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -187,11 +187,11 @@
 </head>
 
 <body>
-    <h1>Task Elicitation Study</h1>
+    <h1>Adaptive Preference Elicitation with Credit Card Recommendation</h1>
     <div id="instructions">
-        By answering the following questions, you are participating in a study being performed by computer scientists in the
-        MIT Department of Electrical Engineering and Computer Science and the Stanford Computer Science Department.
-        If you have questions about this research, please contact Belinda Li at bzl@mit.edu or Alex Tamkin at atamkin@stanford.edu.
+        By answering the following questions, you are participating in a study being performed by researchers in the Decision, 
+        Operations and Information Technologies (DOIT) Department at the Robert H. Smith School of Business.
+        If you have questions about this research, please contact Jiannan Xu at jiannan@umd.edu or Jane Jiang at jiang.3186@osu.edu.
         You must be at least 18 years old to participate. Your participation in this research is voluntary.
         You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences.
         Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.
@@ -255,21 +255,35 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-    <div style="display: none; flex-direction: row;" id="evaluation">
-        <form id="evaluation_form">
+    <div style="display: none; flex-direction: column;" id="evaluation">
+        <!-- Recommendation Rationale Block -->
+        <div id="recommendation_rationale" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; background-color: #f9f9f9;">
+            <div style="font-weight: bold;">Recommendation Rationale</div>
+            <div id="recommendation_text" style="margin-top: 10px;">
+                <!-- The recommendation rationale will be dynamically inserted here -->
+                Based on your preference for shopping, especially groceries, and participation in loyalty or rewards programs, the Bank of America Customized Cash Rewards Credit Card may be a good fit for you. This card offers 2% cash back at grocery stores and wholesale clubs, and 3% cash back on a category of your choice. It also has no annual fee and a 0% intro APR for 15 months on purchases and balance transfers. However, eligibility requires good to excellent credit.
+            </div>
+        </div>
+        
+        <!-- Evaluation Form Block -->
+        <form id="evaluation_form" style="display: flex; flex-direction: column;">
             <div class="matrix-container" id="test_samples">
                 <div class="matrix-row matrix-header">
-                  <div class="matrix-email">Test Case</div>
-                  <div class="matrix-radio">Yes</div>
-                  <div class="matrix-radio">No</div>
-                  <div class="matrix-explanation">Explanation (Optional)</div>
+                    <div class="matrix-email">Source Documents</div>
+                    <div class="matrix-radio">Yes</div>
+                    <div class="matrix-radio">No</div>
+                    <div class="matrix-explanation">Explanation (Optional)</div>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" style="margin-top: 20px;">Submit</button>
         </form>
-        <div id="evaluation_reference_query_answers">
+        
+        <!-- Evaluation Reference Block -->
+        <div id="evaluation_reference_query_answers" style="margin-top: 20px;">
             <div style="font-weight: bold;">Your Response(s)</div>
-            <div style="font-weight: bold; color: red">Your submitted response(s) are provided for reference, but please make decisions based on your present intuition, not strictly based on these responses.</div>
+            <div style="font-weight: bold; color: red">
+                Your submitted response(s) are provided for reference, but please make decisions based on your present intuition, not strictly based on these responses.
+            </div>
             <ol id="evaluation_reference_query_answers_list"></ol>
         </div>
     </div>
@@ -356,6 +370,26 @@
             });
         }
 
+        async function generateTestExamples() {
+        // Fetch test samples from the server
+        let response = await fetch("/generate_test_examples", {
+            method: "POST",
+            body: new URLSearchParams({ "prolific_id": prolificID })
+        });
+
+        let data = await response.json();
+        if (data.response === "done") {
+            // Populate the recommendation rationale
+            document.getElementById("recommendation_text").innerText = data.reco_rationale;
+            const testSamples = data.test_samples;
+            populateTestSamples(testSamples);
+        } else {
+            console.error("Error generating test examples:", data);
+        }
+    }
+
+
+
         async function getNextPrompt() {
             // get next prompt from server
             let response = await fetch("/get_next_prompt", {
@@ -374,7 +408,7 @@
                 continueButton.innerHTML = "This is intentional. Continue.";
                 continueButton.addEventListener("click", function() {
                     let prompt = data["prompt"];
-                    let testSamples = data["test_samples"];
+                    //let testSamples = data["test_samples"];
                     evalPrompt = data["evaluation_prompt"];
                     queryMode = data["mode"];
 
@@ -409,12 +443,12 @@
 
             let prompt = data["prompt"];
             evalPrompt = data["evaluation_prompt"];
-            let testSamples = data["test_samples"];
+            //let testSamples = data["test_samples"];
             queryMode = data["mode"];
 
             prompt = prompt.replace(/\n/g, '<br><br>')
             document.getElementById("instructions").innerHTML = prompt;
-            populateTestSamples(testSamples);
+            //populateTestSamples(testSamples);
             return true;
         }
 
@@ -530,7 +564,7 @@
             addNewTurn(message, "user-message");
             messageInput.value = ""; // Clear the input field after sending the message
 
-            if (Date.now() - conversationTaskStartTime > 5 * 60 * 1000) {
+            if (Date.now() - conversationTaskStartTime > 0.5 * 60 * 1000) {
                 serverRequestBody.append("time_up", true);
             }
 
@@ -540,8 +574,8 @@
             });
             const data = await response.json();
 
-            // Submit the conversation if the assistant responds with an empty message or if the conversation has been going on for 5 minutes
-            if (data.response == null || Date.now() - conversationTaskStartTime > 5 * 60 * 1000) {
+            // Submit the conversation if the assistant responds with an empty message or if the conversation has been going on for 2 minutes
+            if (data.response == null || Date.now() - conversationTaskStartTime > 0.5 * 60 * 1000) {
                 submit_conversation();
             } else {
                 // Add assistant message to the conversation
@@ -559,6 +593,7 @@
                 method: "POST",
                 body: makeServerRequestBody(false),
             });
+
             document.getElementById("generative_al_task").style.display = "none";
             document.getElementById("feedback_intermediate").style.display = "block";
             if (queryMode == "chat") {
@@ -569,6 +604,7 @@
             document.getElementById(`interm_q1_${queryMode}`).style.display = "inline";
             document.getElementById(`interm_q2_${queryMode}`).style.display = "block";
             document.getElementById(`interm_q3_${queryMode}`).style.display = "inline";
+            generateTestExamples();
         }
 
         document.getElementById("prompt_submit").addEventListener("click", async (e) => {
@@ -583,6 +619,7 @@
                 method: "POST",
                 body: serverRequestBody,
             });
+        
             submit_conversation();
         });
 
@@ -709,12 +746,12 @@
             document.getElementById("timer_value").innerHTML = timeToDisplay;
                 
             // Display the message when countdown is over
-            if (timespent > 5 * 60 * 1000) {
+            if (timespent > 0.5 * 60 * 1000) { // change time to `0.5 * 60 * 1000` for 2 minutes
                 if (lastTurnType == "assistant-message" || queryMode == "prompt") {
                     // waiting for user to submit
                     clearInterval(timer);
                     if (queryMode == "prompt") {
-                        document.getElementById("timer_value").innerHTML = "Your 5 minutes are up. Please finish up and submit what you have. Once you submit, you will be redirected to the next page.";
+                        document.getElementById("timer_value").innerHTML = "Your 2 minutes are up. Please finish up and submit what you have. Once you submit, you will be redirected to the next page.";
                     } else {
                         document.getElementById("timer_value").innerHTML = "This will be the last question. Please finish and submit your response to this question. Once you submit, you will be redirected to the next page.";
                     }
