@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "09",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -11,19 +11,41 @@
   "conversation_history": [
     {
       "sender": "assistant",
-      "message": "\"What are your main financial goals for the next 5 years?\""
+      "message": "\"What are your financial goals for the next 5 years and how do you plan to achieve them?\""
     },
     {
       "sender": "user",
       "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "time_spent_ms": 2505,
+      "display_time": 1725934161410,
+      "submission_time": 1725934163915
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your spending habits like on a monthly basis, and how do you typically use your credit card?\""
+    },
+    {
+      "sender": "user",
+      "message": "everyday purchases",
+      "time_spent_ms": 4127,
+      "display_time": 1725934165278,
+      "submission_time": 1725934169405
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you manage unexpected expenses or financial emergencies?\""
+    },
+    {
+      "sender": "user",
+      "message": "I like shopping",
+      "time_spent_ms": 7797,
+      "display_time": 1725934170457,
+      "submission_time": 1725934178254
     }
   ],
   "evaluation_results": [],
   "feedback": {
-    "feedback_challenge": "1",
+    "feedback_challenge": "4",
     "feedback_new_issues_interaction": "1",
     "feedback_interaction_coverage_pretest": "1"
   },

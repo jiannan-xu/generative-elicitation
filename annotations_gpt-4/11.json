@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "11",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -15,10 +15,10 @@
     },
     {
       "sender": "user",
-      "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "message": "I like shopping",
+      "time_spent_ms": 13159,
+      "display_time": 1725934631543,
+      "submission_time": 1725934644702
     }
   ],
   "evaluation_results": [],

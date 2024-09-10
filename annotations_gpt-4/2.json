@@ -1,0 +1,179 @@
+{
+  "prolific_id": "2",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "\"What are your main financial goals for the next 5 years?\""
+    },
+    {
+      "sender": "user",
+      "message": "I would like to have a credit card to pay off my card debt. ",
+      "time_spent_ms": 11492,
+      "display_time": 1725932550321,
+      "submission_time": 1725932561813
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your spending habits like on a monthly basis, and how do you typically manage your budget?\""
+    },
+    {
+      "sender": "user",
+      "message": "everyday purchases",
+      "time_spent_ms": 6469,
+      "display_time": 1725932563327,
+      "submission_time": 1725932569796
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you typically handle unexpected expenses or financial emergencies?\""
+    },
+    {
+      "sender": "user",
+      "message": "I have no credit card.",
+      "time_spent_ms": 8702,
+      "display_time": 1725932571058,
+      "submission_time": 1725932579760
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What is your approach towards managing your debts and how often do you review your credit report?\""
+    },
+    {
+      "sender": "user",
+      "message": "I have a hard time to manage my debt",
+      "time_spent_ms": 23320,
+      "display_time": 1725932581074,
+      "submission_time": 1725932604394
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What type of employment do you have and how stable is your income?\""
+    },
+    {
+      "sender": "user",
+      "message": "I do a part-time job",
+      "time_spent_ms": 9431,
+      "display_time": 1725932605843,
+      "submission_time": 1725932615274
+    },
+    {
+      "sender": "assistant",
+      "message": "\"Do you have any regular financial obligations, such as rent, utilities, or loan repayments, and how do these impact your monthly budget?\""
+    },
+    {
+      "sender": "user",
+      "message": "Yes, I have loan and rent to pay",
+      "time_spent_ms": 10632,
+      "display_time": 1725932619783,
+      "submission_time": 1725932630415
+    },
+    {
+      "sender": "assistant",
+      "message": "\"Do you have any savings or investments set aside, and how do you typically allocate your income towards these?\""
+    },
+    {
+      "sender": "user",
+      "message": "No",
+      "time_spent_ms": 4326,
+      "display_time": 1725932632078,
+      "submission_time": 1725932636404
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you prioritize your spending when it comes to discretionary expenses like dining out, entertainment, travel, and shopping?\""
+    },
+    {
+      "sender": "user",
+      "message": "I like shopping",
+      "time_spent_ms": 21192,
+      "display_time": 1725932637852,
+      "submission_time": 1725932659044
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How often do you apply for new credit or loans, and what factors do you consider when deciding to do so?\""
+    },
+    {
+      "sender": "user",
+      "message": "I haven't applied any",
+      "time_spent_ms": 6883,
+      "display_time": 1725932660377,
+      "submission_time": 1725932667260
+    },
+    {
+      "sender": "assistant",
+      "message": "\"Do you support any family members financially, and if so, how does this affect your budgeting and spending habits?\""
+    },
+    {
+      "sender": "user",
+      "message": "Yes. I have to feed kids",
+      "time_spent_ms": 14507,
+      "display_time": 1725932668650,
+      "submission_time": 1725932683157
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you plan to manage your credit card payments, considering your current financial obligations and spending habits?\""
+    },
+    {
+      "sender": "user",
+      "message": "I try to make ends meet.",
+      "time_spent_ms": 19436,
+      "display_time": 1725932684271,
+      "submission_time": 1725932703707
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What strategies or changes are you considering to improve your financial situation and manage your debt more effectively?\""
+    },
+    {
+      "sender": "user",
+      "message": "I have no idea",
+      "time_spent_ms": 8272,
+      "display_time": 1725932705318,
+      "submission_time": 1725932713590
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your expectations from a credit card and how do you think it can help you in managing your financial situation better?\""
+    },
+    {
+      "sender": "user",
+      "message": "cash back",
+      "time_spent_ms": 3994,
+      "display_time": 1725932715027,
+      "submission_time": 1725932719021
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your thoughts on credit card rewards programs, and how do you envision using such benefits to support your financial goals and lifestyle needs?\""
+    },
+    {
+      "sender": "user",
+      "message": "I don't know",
+      "time_spent_ms": 16404,
+      "display_time": 1725932720756,
+      "submission_time": 1725932737160
+    }
+  ],
+  "evaluation_results": [],
+  "feedback": {
+    "feedback_challenge": "3",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "5"
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nYou should first ask a series of indirect questions to understand the financial situation of the user. We are interested in a user\u2019s income, credit score, debt, loan, etc. Such information is important in determining whether a user meets the eligibility requirement of each credit card. However, because financial information can be very sensitive, we want to ask these questions in an indirect manner.\nFor example, you may ask the stability of the income (\"What type of employment do you have (full-time, part-time, self-employed, etc.)?\"), housing situation (\"How long have you lived at your current address?\"), monthly financial commitments (\"Do you have any regular financial obligations, like child support or loan repayments?\"), spending and saving habits (\"Do you regularly save a portion of your income?\"), debt management (\"Are you comfortable with your current level of debt?\"), \naccess to credit (\"How often do you apply for new credit or loans?\"), and family and dependents (\"Do you support any family members financially?\"). \n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked.              At the same time however, the question should be bite-sized, and not ask for too much at once.  Generate the open-ended question and nothing else:"
+    }
+  ]
+}

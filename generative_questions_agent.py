@@ -46,11 +46,16 @@ class GenerativeQuestionsAgent(BaseActiveLearningAgent):
 
         question_prompt = textwrap.dedent('''\
             Your task is to {task_description}.
+                                          
+            You should first ask a series of indirect questions to understand the financial situation of the user. We are interested in a user’s income, credit score, debt, loan, etc. Such information is important in determining whether a user meets the eligibility requirement of each credit card. However, because financial information can be very sensitive, we want to ask these questions in an indirect manner.
+            For example, you may ask the stability of the income ("What type of employment do you have (full-time, part-time, self-employed, etc.)?"), housing situation ("How long have you lived at your current address?"), monthly financial commitments ("Do you have any regular financial obligations, like child support or loan repayments?"), spending and saving habits ("Do you regularly save a portion of your income?"), debt management ("Are you comfortable with your current level of debt?"), 
+            access to credit ("How often do you apply for new credit or loans?"), and family and dependents ("Do you support any family members financially?"). 
 
             Previous questions:
             {interaction_history}
 
-            Generate the most informative {question_type_insert} that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the {implementation} than the questions that have already been asked. At the same time however, the question should be bite-sized, and not ask for too much at once. {additional_prompt}Generate the {question_type_insert} and nothing else:'''
+            Generate the most informative {question_type_insert} that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the {implementation} than the questions that have already been asked. \
+             At the same time however, the question should be bite-sized, and not ask for too much at once. {additional_prompt} Generate the {question_type_insert} and nothing else:'''
             ).format(
                 implementation=implementation,
                 task_description=task_description,

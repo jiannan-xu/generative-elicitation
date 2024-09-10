@@ -1,0 +1,142 @@
+{
+  "prolific_id": "0",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "\"What are your main reasons for wanting a new credit card? Are you looking for rewards, balance transfers, low interest rates, or something else?\""
+    },
+    {
+      "sender": "user",
+      "message": "low interest rates",
+      "time_spent_ms": 11433,
+      "display_time": 1725929491903,
+      "submission_time": 1725929503336
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you typically manage your monthly expenses and what percentage of your income do you allocate towards paying off debts?\""
+    },
+    {
+      "sender": "user",
+      "message": "20%",
+      "time_spent_ms": 11804,
+      "display_time": 1725929504414,
+      "submission_time": 1725929516218
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What is your approach towards saving and investing, and how does this fit into your overall financial strategy?\""
+    },
+    {
+      "sender": "user",
+      "message": "I try to make ends meet.",
+      "time_spent_ms": 11610,
+      "display_time": 1725929517758,
+      "submission_time": 1725929529368
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How often do you use credit cards for your purchases and what types of purchases do you typically make with them?\""
+    },
+    {
+      "sender": "user",
+      "message": "I do not have a credit card",
+      "time_spent_ms": 10354,
+      "display_time": 1725929530487,
+      "submission_time": 1725929540841
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What type of employment do you have and how stable is your income?\""
+    },
+    {
+      "sender": "user",
+      "message": "I work as a waiter as a part-time",
+      "time_spent_ms": 25179,
+      "display_time": 1725929542129,
+      "submission_time": 1725929567308
+    },
+    {
+      "sender": "assistant",
+      "message": "\"Do you have any regular financial obligations, such as rent, utilities, or loan repayments, and how do these impact your monthly budget?\""
+    },
+    {
+      "sender": "user",
+      "message": "I have loan to pay",
+      "time_spent_ms": 10089,
+      "display_time": 1725929568745,
+      "submission_time": 1725929578834
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How comfortable are you with your current level of debt and how does it affect your daily life and financial decisions?\""
+    },
+    {
+      "sender": "user",
+      "message": "I have a hard time to manage and that is why I would like to apply for a credit card and build my credit score",
+      "time_spent_ms": 13471,
+      "display_time": 1725929580193,
+      "submission_time": 1725929593664
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How often do you apply for new credit or loans, and what factors do you consider when deciding to do so?\""
+    },
+    {
+      "sender": "user",
+      "message": "I haven't applied any",
+      "time_spent_ms": 14390,
+      "display_time": 1725929594881,
+      "submission_time": 1725929609271
+    },
+    {
+      "sender": "assistant",
+      "message": "\"Do you have any dependents or family members that you financially support, and if so, how does this affect your financial planning and decision-making?\""
+    },
+    {
+      "sender": "user",
+      "message": "Yes I have two children",
+      "time_spent_ms": 13287,
+      "display_time": 1725929610738,
+      "submission_time": 1725929624025
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you plan to use your new credit card to manage your debt and improve your financial situation?\""
+    },
+    {
+      "sender": "user",
+      "message": "I plan to use it for grocery shopping",
+      "time_spent_ms": 16466,
+      "display_time": 1725929625244,
+      "submission_time": 1725929641710
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What strategies do you have in place to ensure you can make regular payments on your credit card, especially considering your part-time employment and existing financial obligations?\""
+    },
+    {
+      "sender": "user",
+      "message": "I try to make ends meet.",
+      "time_spent_ms": 37960,
+      "display_time": 1725929643319,
+      "submission_time": 1725929681279
+    }
+  ],
+  "evaluation_results": [],
+  "feedback": {},
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nYou should first ask a series of indirect questions to understand the financial situation of the user. We are interested in a user\u2019s income, credit score, debt, loan, etc. Such information is important in determining whether a user meets the eligibility requirement of each credit card. However, because financial information can be very sensitive, we want to ask these questions in an indirect manner.\nFor example, you may ask the stability of the income (\"What type of employment do you have (full-time, part-time, self-employed, etc.)?\"), housing situation (\"How long have you lived at your current address?\"), monthly financial commitments (\"Do you have any regular financial obligations, like child support or loan repayments?\"), spending and saving habits (\"Do you regularly save a portion of your income?\"), debt management (\"Are you comfortable with your current level of debt?\"), \naccess to credit (\"How often do you apply for new credit or loans?\"), and family and dependents (\"Do you support any family members financially?\"). \n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked.              At the same time however, the question should be bite-sized, and not ask for too much at once.  Generate the open-ended question and nothing else:"
+    }
+  ]
+}

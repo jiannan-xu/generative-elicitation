@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "2009",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -11,22 +11,18 @@
   "conversation_history": [
     {
       "sender": "assistant",
-      "message": "\"What are your main financial goals for the next 5 years?\""
+      "message": "\"How do you typically use your credit card - for everyday purchases, large one-time expenses, travel, or something else?\""
     },
     {
       "sender": "user",
-      "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "message": "Everyday purchases",
+      "time_spent_ms": 13040,
+      "display_time": 1725995364188,
+      "submission_time": 1725995377228
     }
   ],
   "evaluation_results": [],
-  "feedback": {
-    "feedback_challenge": "1",
-    "feedback_new_issues_interaction": "1",
-    "feedback_interaction_coverage_pretest": "1"
-  },
+  "feedback": {},
   "query_prompt": [
     {
       "role": "user",

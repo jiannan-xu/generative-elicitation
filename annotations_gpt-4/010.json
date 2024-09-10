@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "010",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -16,9 +16,31 @@
     {
       "sender": "user",
       "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "time_spent_ms": 3555,
+      "display_time": 1725934304669,
+      "submission_time": 1725934308224
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you typically use your credit card - for everyday purchases, large one-time expenses, emergencies, or something else?\""
+    },
+    {
+      "sender": "user",
+      "message": "everyday purchases",
+      "time_spent_ms": 5042,
+      "display_time": 1725934309556,
+      "submission_time": 1725934314598
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you manage your monthly budget and what percentage of your income do you typically allocate towards savings?\""
+    },
+    {
+      "sender": "user",
+      "message": "cash back",
+      "time_spent_ms": 2612,
+      "display_time": 1725934315811,
+      "submission_time": 1725934318423
     }
   ],
   "evaluation_results": [],

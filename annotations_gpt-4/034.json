@@ -1,0 +1,172 @@
+{
+  "prolific_id": "034",
+  "engine": "gpt-4",
+  "query_type": "Generative open-ended questions",
+  "prompt": {
+    "preamble": "We are testing a system for understanding people's interest in different types of credit cards.\nFor example, you might be interested in credit cards with a lower interest rate and no annual fee, but not about others.",
+    "task_description": "your preferences of what kinds of credit cards you would like to use",
+    "final": "In the final part of the study, you will give feedback on a test set of credit card and descriptions, which will enable us to see how well a chatbot reading your responses has learned what you like and dislike.",
+    "evaluation": "Please indicate whether you would like to apply for the following recommended credit cards: \"yes\" if you would, \"no\" if you would not."
+  },
+  "conversation_history": [
+    {
+      "sender": "assistant",
+      "message": "\"What are your financial goals for the next five years and how do you plan to achieve them?\""
+    },
+    {
+      "sender": "user",
+      "message": "I try to make ends meet.",
+      "time_spent_ms": 3822,
+      "display_time": 1725934855997,
+      "submission_time": 1725934859819
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your spending habits like on a monthly basis, and how do you typically use your credit card?\""
+    },
+    {
+      "sender": "user",
+      "message": "everyday purchases",
+      "time_spent_ms": 7105,
+      "display_time": 1725934860981,
+      "submission_time": 1725934868086
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you manage unexpected expenses or financial emergencies, and what role does your credit card play in these situations?\""
+    },
+    {
+      "sender": "user",
+      "message": "I don't have a plan",
+      "time_spent_ms": 30622,
+      "display_time": 1725934869561,
+      "submission_time": 1725934900183
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What strategies do you use to manage your debt and how often do you review your credit report?\""
+    },
+    {
+      "sender": "user",
+      "message": "I have no strategy",
+      "time_spent_ms": 10936,
+      "display_time": 1725934901620,
+      "submission_time": 1725934912556
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you approach saving and investing, and what percentage of your income, if any, do you typically allocate towards these areas?\""
+    },
+    {
+      "sender": "user",
+      "message": "0%",
+      "time_spent_ms": 6213,
+      "display_time": 1725934913843,
+      "submission_time": 1725934920056
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What is your approach towards managing your monthly bills and financial obligations, and how does your credit card factor into this process?\""
+    },
+    {
+      "sender": "user",
+      "message": "I have rent and loan to pay",
+      "time_spent_ms": 13105,
+      "display_time": 1725934921372,
+      "submission_time": 1725934934477
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you prioritize your financial responsibilities and what role does your credit card play in this prioritization?\""
+    },
+    {
+      "sender": "user",
+      "message": "cash back",
+      "time_spent_ms": 6849,
+      "display_time": 1725934936281,
+      "submission_time": 1725934943130
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your thoughts on credit card rewards programs, and how do they factor into your decision when choosing a credit card?\""
+    },
+    {
+      "sender": "user",
+      "message": "I don't care",
+      "time_spent_ms": 9361,
+      "display_time": 1725934944729,
+      "submission_time": 1725934954090
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you feel about your current credit card's interest rate and fees, and how do they impact your financial management?\""
+    },
+    {
+      "sender": "user",
+      "message": "They are too high",
+      "time_spent_ms": 12182,
+      "display_time": 1725934955669,
+      "submission_time": 1725934967851
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you manage your finances when it comes to travel or leisure activities, and what role does your credit card play in these situations?\""
+    },
+    {
+      "sender": "user",
+      "message": "I don't travel",
+      "time_spent_ms": 17057,
+      "display_time": 1725934969376,
+      "submission_time": 1725934986433
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your thoughts on credit limit and how does it affect your spending habits?\""
+    },
+    {
+      "sender": "user",
+      "message": "I would like to have a higher limit",
+      "time_spent_ms": 9974,
+      "display_time": 1725934987833,
+      "submission_time": 1725934997807
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you feel about your current credit card's customer service and how does it impact your overall satisfaction with the card?\""
+    },
+    {
+      "sender": "user",
+      "message": "They are the worst",
+      "time_spent_ms": 24146,
+      "display_time": 1725934999212,
+      "submission_time": 1725935023358
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your thoughts on credit card security features, and how important are they in your decision-making process when choosing a credit card?\""
+    },
+    {
+      "sender": "user",
+      "message": "It is very important",
+      "time_spent_ms": 8860,
+      "display_time": 1725935025816,
+      "submission_time": 1725935034676
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you approach your financial planning for the future, and what role would you like your credit card to play in this process?\""
+    }
+  ],
+  "evaluation_results": [],
+  "feedback": {
+    "feedback_challenge": "5",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "3"
+  },
+  "query_prompt": [
+    {
+      "role": "user",
+      "content": "Your task is to learn what credit card a user is interested in applying. People's interests are broad, so you should seek to understand their interests across many topics; in other words, go for breadth rather than depth. Do not assume a user has given a complete answer to any question, so make sure to keep probing different types of interests.\n\nYou should first ask a series of indirect questions to understand the financial situation of the user. We are interested in a user\u2019s income, credit score, debt, loan, etc. Such information is important in determining whether a user meets the eligibility requirement of each credit card. However, because financial information can be very sensitive, we want to ask these questions in an indirect manner.\nFor example, you may ask the stability of the income (\"What type of employment do you have (full-time, part-time, self-employed, etc.)?\"), housing situation (\"How long have you lived at your current address?\"), monthly financial commitments (\"Do you have any regular financial obligations, like child support or loan repayments?\"), spending and saving habits (\"Do you regularly save a portion of your income?\"), debt management (\"Are you comfortable with your current level of debt?\"), \naccess to credit (\"How often do you apply for new credit or loans?\"), and family and dependents (\"Do you support any family members financially?\"). \n\nPrevious questions:\n- [Q] -> [A]\n\nGenerate the most informative open-ended question that, when answered, will reveal the most about the desired behavior beyond what has already been queried for above. Make sure your question addresses different aspects of the user's interests than the questions that have already been asked.              At the same time however, the question should be bite-sized, and not ask for too much at once.  Generate the open-ended question and nothing else:"
+    }
+  ]
+}

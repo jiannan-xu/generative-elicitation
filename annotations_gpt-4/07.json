@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "07",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -11,21 +11,43 @@
   "conversation_history": [
     {
       "sender": "assistant",
-      "message": "\"What are your main financial goals for the next 5 years?\""
+      "message": "\"How do you typically use your credit cards - for everyday purchases, large one-time expenses, travel, or something else?\""
+    },
+    {
+      "sender": "user",
+      "message": "I like shopping",
+      "time_spent_ms": 2439,
+      "display_time": 1725933999000,
+      "submission_time": 1725934001439
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your shopping habits like - do you tend to make small frequent purchases or larger, less frequent ones?\""
     },
     {
       "sender": "user",
       "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "time_spent_ms": 2248,
+      "display_time": 1725934003151,
+      "submission_time": 1725934005399
+    },
+    {
+      "sender": "assistant",
+      "message": "\"Do you have a specific budget you try to stick to each month, and if so, how often do you find yourself going over it?\""
+    },
+    {
+      "sender": "user",
+      "message": "Yes. I need to pay my rent bills",
+      "time_spent_ms": 10918,
+      "display_time": 1725934006904,
+      "submission_time": 1725934017822
     }
   ],
   "evaluation_results": [],
   "feedback": {
-    "feedback_challenge": "1",
-    "feedback_new_issues_interaction": "1",
-    "feedback_interaction_coverage_pretest": "1"
+    "feedback_challenge": "4",
+    "feedback_new_issues_interaction": "4",
+    "feedback_interaction_coverage_pretest": "3"
   },
   "query_prompt": [
     {

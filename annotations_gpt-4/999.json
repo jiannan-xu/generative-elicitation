@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "999",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -16,16 +16,31 @@
     {
       "sender": "user",
       "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "time_spent_ms": 1998,
+      "display_time": 1725936880545,
+      "submission_time": 1725936882543
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your typical monthly expenses and how do you prioritize them?\""
+    },
+    {
+      "sender": "user",
+      "message": "everyday purchases",
+      "time_spent_ms": 2192,
+      "display_time": 1725936883723,
+      "submission_time": 1725936885915
+    },
+    {
+      "sender": "assistant",
+      "message": "\"How do you typically manage unexpected expenses or financial emergencies?\""
     }
   ],
   "evaluation_results": [],
   "feedback": {
-    "feedback_challenge": "1",
-    "feedback_new_issues_interaction": "1",
-    "feedback_interaction_coverage_pretest": "1"
+    "feedback_challenge": "4",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "3"
   },
   "query_prompt": [
     {

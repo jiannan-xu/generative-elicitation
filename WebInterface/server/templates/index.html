@@ -30,6 +30,7 @@
         }
 
         #instructions {
+            font-size: 1.2em;
             margin-bottom: 15px;
         }
 
@@ -210,7 +211,7 @@
         </div>
         <div id="generative_al_task_chat" style="display: none;">
             <div id="conversation"></div>
-            <div id="typing-message" style="color: gray">Chatbot is typing...</div>
+            <div id="typing-message" style="color: gray"> AI Financial Expert is typing...</div>
             <form id="chat-form">
                 <input type="text" id="message" name="message" required placeholder="Your message..." disabled="true">
                 <button type="submit" id="message_submit" disabled="true">Send</button>
@@ -227,10 +228,10 @@
         <!-- <button id="done" style="background-color: #E74556;">Finish Conversation</button> -->
     </div>
     <div style="display: none;" id="feedback_intermediate">
-        <form id="feedback_intermediate_form">
+        <form id="feedback_intermediate_form" style="font-size: 1.2em;">
             <div>How mentally demanding was <span id="interm_q1_chat" style="display: none;">interacting with the chatbot</span><span id="interm_q1_prompt" style="display: none;">writing your answer</span>?</div>
                 <span class="left">Very Low</span><span class="right">Very High</span>
-                <input type="range" min="1" max="7" id="feedback_challenge" name="feedback_challenge" list="feedback_challenge_datalist"/>
+                <input type="range" min="1" max="7" id="feedback_challenge" name="feedback_challenge" list="feedback_challenge_datalist" value ="1"/>
                 <datalist id="feedback_challenge_datalist" style="--list-length: 7;">
                     <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
                 </datalist>
@@ -238,7 +239,7 @@
             <div id="interm_q2_chat" style="display: none;">
                 <div>To what extent did the chatbot raise issues or aspects about your preferences that you hadn't previously considered?</div>
                     <span class="left">Very Little</span><span class="right">Very Much</span>
-                    <input type="range" min="1" max="7" id="feedback_new_issues_interaction" name="feedback_new_issues_interaction" list="feedback_new_issues_interaction_datalist"/>
+                    <input type="range" min="1" max="7" id="feedback_new_issues_interaction" name="feedback_new_issues_interaction" list="feedback_new_issues_interaction_datalist" value ="1"/>
                     <datalist id="feedback_new_issues_interaction_datalist" style="--list-length: 7;">
                         <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
                     </datalist>
@@ -247,7 +248,7 @@
             <div id="interm_q2_prompt" style="display: none;"></div>
             <div>How comprehensively do you feel <span id="interm_q3_chat" style="display: none;">the chatbot's questions</span><span id="interm_q3_prompt" style="display: none;">your answer</span> characterized your preferences about the task?</div>
                 <span class="left">Very Poorly</span><span class="right">Very Well</span>
-                <input type="range" min="1" max="7" id="feedback_interaction_coverage_pretest" name="feedback_interaction_coverage_pretest" list="feedback_interaction_coverage_pretest_datalist"/>
+                <input type="range" min="1" max="7" id="feedback_interaction_coverage_pretest" name="feedback_interaction_coverage_pretest" list="feedback_interaction_coverage_pretest_datalist" value ="1"/>
                 <datalist id="feedback_interaction_coverage_pretest_datalist" style="--list-length: 7;">
                     <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
                 </datalist>
@@ -261,7 +262,6 @@
             <div style="font-weight: bold;">Recommendation Rationale</div>
             <div id="recommendation_text" style="margin-top: 10px;">
                 <!-- The recommendation rationale will be dynamically inserted here -->
-                Based on your preference for shopping, especially groceries, and participation in loyalty or rewards programs, the Bank of America Customized Cash Rewards Credit Card may be a good fit for you. This card offers 2% cash back at grocery stores and wholesale clubs, and 3% cash back on a category of your choice. It also has no annual fee and a 0% intro APR for 15 months on purchases and balance transfers. However, eligibility requires good to excellent credit.
             </div>
         </div>
         
@@ -287,26 +287,27 @@
             <ol id="evaluation_reference_query_answers_list"></ol>
         </div>
     </div>
+    <p id="status_message"></p> 
     <div style="display: none;" id="feedback_final">
-        <form id="feedback_final_form">
+        <form id="feedback_final_form" style="font-size: 1.2em;">
             <br>
             <div>After seeing the examples in the <i>second</i> part of the task, how well do you feel <span id="final_q1_chat" style="display: none;">the chatbot</span><span id="final_q1_prompt" style="display: none;">the answer you wrote</span> (in the first part of the task) covered the important issues or aspects of these examples?</div>
                 <span class="left">Very Poorly</span><span class="right">Very Well</span>
-                <input type="range" min="1" max="7" id="feedback_interaction_coverage_posttest" name="feedback_interaction_coverage_posttest" list="feedback_interaction_coverage_posttest_datalist"/>
+                <input type="range" min="1" max="7" id="feedback_interaction_coverage_posttest" name="feedback_interaction_coverage_posttest" list="feedback_interaction_coverage_posttest_datalist" value ="1"/>
                 <datalist id="feedback_interaction_coverage_posttest_datalist" style="--list-length: 7;">
                     <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
                 </datalist>
             <br>
             <div>When performing the <i>second</i> part of the task, to what extent did you refer back to your <span id="final_q2_chat" style="display: none;">conversation history</span><span id="final_q2_prompt" style="display: none;">answer</span> from the first part of the task?</div>
                 <span class="left">Very Little</span><span class="right">Very Much</span>
-                <input type="range" min="1" max="7" id="feedback_testcase_use_history" name="feedback_testcase_use_history" list="feedback_testcase_use_history_datalist"/>
+                <input type="range" min="1" max="7" id="feedback_testcase_use_history" name="feedback_testcase_use_history" list="feedback_testcase_use_history_datalist" value ="1"/>
                 <datalist id="feedback_testcase_use_history_datalist" style="--list-length: 7;">
                     <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
                 </datalist>
             <br>
             <div>How much experience have you had (if any) with interacting with language models (e.g. ChatGPT, GPT4, etc.)?</div>
                 <span class="left">Very Little</span><span class="right">Very Much</span>
-                <input type="range" min="1" max="7" id="feedback_lm_experience" name="feedback_lm_experience" list="feedback_lm_experience_datalist"/>
+                <input type="range" min="1" max="7" id="feedback_lm_experience" name="feedback_lm_experience" list="feedback_lm_experience_datalist" value ="1"/>
                 <datalist id="feedback_lm_experience_datalist" style="--list-length: 7;">
                     <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
                 </datalist>
@@ -371,22 +372,48 @@
         }
 
         async function generateTestExamples() {
+        // Display a loading message while waiting for the recommendation
+        document.getElementById("status_message").innerText = "Generating your recommendation... Please wait for a moment.";
+
+    try {
         // Fetch test samples from the server
         let response = await fetch("/generate_test_examples", {
             method: "POST",
             body: new URLSearchParams({ "prolific_id": prolificID })
         });
 
+        // Check if the response is okay
+        if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+
         let data = await response.json();
         if (data.response === "done") {
-            // Populate the recommendation rationale
-            document.getElementById("recommendation_text").innerText = data.reco_rationale;
-            const testSamples = data.test_samples;
-            populateTestSamples(testSamples);
+            // Wait for 5 seconds before showing the recommendation
+            setTimeout(() => {
+                // Hide the status message
+                document.getElementById("status_message").innerText = "";
+
+                // Populate the recommendation rationale
+                document.getElementById("recommendation_text").innerText = data.reco_rationale;
+
+                // Show the evaluation section (if hidden initially)
+                document.getElementById("evaluation").style.display = "flex";
+
+                // Handle test samples
+                const testSamples = data.test_samples;
+                populateTestSamples(testSamples);
+            }, 8000); // 8 seconds delay
         } else {
             console.error("Error generating test examples:", data);
+            document.getElementById("status_message").innerText = "Error generating test examples. Please try again.";
         }
+    } catch (error) {
+        // Handle any errors that occur during the fetch
+        console.error("Error:", error);
+        document.getElementById("status_message").innerText = "An error occurred. Please try again later.";
     }
+}
 
 
 
@@ -564,7 +591,7 @@
             addNewTurn(message, "user-message");
             messageInput.value = ""; // Clear the input field after sending the message
 
-            if (Date.now() - conversationTaskStartTime > 0.5 * 60 * 1000) {
+            if (Date.now() - conversationTaskStartTime > 3 * 60 * 1000) {
                 serverRequestBody.append("time_up", true);
             }
 
@@ -575,7 +602,7 @@
             const data = await response.json();
 
             // Submit the conversation if the assistant responds with an empty message or if the conversation has been going on for 2 minutes
-            if (data.response == null || Date.now() - conversationTaskStartTime > 0.5 * 60 * 1000) {
+            if (data.response == null || Date.now() - conversationTaskStartTime > 3 * 60 * 1000) {
                 submit_conversation();
             } else {
                 // Add assistant message to the conversation
@@ -619,7 +646,6 @@
                 method: "POST",
                 body: serverRequestBody,
             });
-        
             submit_conversation();
         });
 
@@ -746,7 +772,7 @@
             document.getElementById("timer_value").innerHTML = timeToDisplay;
                 
             // Display the message when countdown is over
-            if (timespent > 0.5 * 60 * 1000) { // change time to `0.5 * 60 * 1000` for 2 minutes
+            if (timespent > 3 * 60 * 1000) { // change time to `3 * 60 * 1000` for 3 minutes
                 if (lastTurnType == "assistant-message" || queryMode == "prompt") {
                     // waiting for user to submit
                     clearInterval(timer);

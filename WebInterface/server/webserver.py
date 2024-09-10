@@ -332,6 +332,7 @@ def generate_test_examples():
     reco_results = GenerativeRag(openai_api_key = openai.api_key, engine = ENGINE , conversation_history=conversation_history).generate_credit_card_recommendation()
     reco_rationale = reco_results["recommendation"]
     test_samples = [doc.page_content for doc in reco_results["source_documents"]]
+    #test_samples = reco_results["source_documents"]
     print(test_samples)
     # assign the test samples to the experiment type for this user
     prolific_id_to_experiment_type[prolific_id]["prompt"]["test_samples"] = test_samples

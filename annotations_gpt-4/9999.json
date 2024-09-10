@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "9999",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -11,21 +11,41 @@
   "conversation_history": [
     {
       "sender": "assistant",
-      "message": "\"What are your main financial goals for the next 5 years?\""
+      "message": "\"How do you typically use your credit cards - for everyday purchases, large one-time expenses, travel, or something else?\""
     },
     {
       "sender": "user",
       "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "time_spent_ms": 6268,
+      "display_time": 1725937282025,
+      "submission_time": 1725937288293
     }
   ],
-  "evaluation_results": [],
+  "evaluation_results": [
+    {
+      "sample": "Credit Card: Citi Double Cash Card\nFeatures: 2% cash back on all purchases (1% when you buy, 1% when you pay)\nEligibility: Good to excellent credit\nBenefits: No annual fee, 0% intro APR for 18 months on balance transfers",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card: Chase Freedom Unlimited\nFeatures: 1.5% cash back on all purchases, 5% cash back on travel purchased through Chase Ultimate Rewards, 3% cash back on dining and drugstore purchases\nEligibility: Good to excellent credit\nBenefits: No annual fee, 0% intro APR for 15 months on purchases and balance transfers",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card: Capital One Quicksilver Cash Rewards Credit Card\nFeatures: 1.5% cash back on all purchases\nEligibility: Good to excellent credit\nBenefits: No annual fee, 0% intro APR for 15 months",
+      "label": "yes",
+      "explanation": ""
+    }
+  ],
   "feedback": {
-    "feedback_challenge": "1",
-    "feedback_new_issues_interaction": "1",
-    "feedback_interaction_coverage_pretest": "1"
+    "feedback_challenge": "4",
+    "feedback_new_issues_interaction": "5",
+    "feedback_interaction_coverage_pretest": "4",
+    "feedback_interaction_coverage_posttest": "4",
+    "feedback_testcase_use_history": "3",
+    "feedback_lm_experience": "4",
+    "feedback_other": ""
   },
   "query_prompt": [
     {

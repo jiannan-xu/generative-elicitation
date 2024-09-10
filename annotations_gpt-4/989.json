@@ -1,5 +1,5 @@
 {
-  "prolific_id": "1998",
+  "prolific_id": "989",
   "engine": "gpt-4",
   "query_type": "Generative open-ended questions",
   "prompt": {
@@ -11,17 +11,44 @@
   "conversation_history": [
     {
       "sender": "assistant",
-      "message": "\"What are your main financial goals for the next 5 years?\""
+      "message": "\"What are your financial goals for the next 5 years and how do you plan to achieve them?\""
+    },
+    {
+      "sender": "user",
+      "message": "I like shopping",
+      "time_spent_ms": 3694,
+      "display_time": 1725936941352,
+      "submission_time": 1725936945046
+    },
+    {
+      "sender": "assistant",
+      "message": "\"What are your spending habits when it comes to shopping, and how do you typically finance these purchases?\""
     },
     {
       "sender": "user",
       "message": "I try to make ends meet.",
-      "time_spent_ms": 11015,
-      "display_time": 1725935913646,
-      "submission_time": 1725935924661
+      "time_spent_ms": 3127,
+      "display_time": 1725936946263,
+      "submission_time": 1725936949390
     }
   ],
-  "evaluation_results": [],
+  "evaluation_results": [
+    {
+      "sample": "Credit Card: Chase Freedom Unlimited\nFeatures: 1.5% cash back on all purchases, 5% cash back on travel purchased through Chase Ultimate Rewards, 3% cash back on dining and drugstore purchases\nEligibility: Good to excellent credit\nBenefits: No annual fee, 0% intro APR for 15 months on purchases and balance transfers",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card: Bank of America Customized Cash Rewards Credit Card\nFeatures: 3% cash back on a category of your choice, 2% cash back at grocery stores and wholesale clubs, 1% cash back on all other purchases\nEligibility: Good to excellent credit\nBenefits: No annual fee, 0% intro APR for 15 months on purchases and balance transfers",
+      "label": "yes",
+      "explanation": ""
+    },
+    {
+      "sample": "Credit Card: Capital One Quicksilver Cash Rewards Credit Card\nFeatures: 1.5% cash back on all purchases\nEligibility: Good to excellent credit\nBenefits: No annual fee, 0% intro APR for 15 months",
+      "label": "yes",
+      "explanation": ""
+    }
+  ],
   "feedback": {
     "feedback_challenge": "1",
     "feedback_new_issues_interaction": "1",
